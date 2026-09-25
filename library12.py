@@ -68,54 +68,114 @@ camera_button = customtkinter.CTkButton(root,width=30,height=30,
                                          image=camera_image,text="",
                                          fg_color="#8B6C5C",hover_color="#5B3E31")
 camera_button.place(x=490,y=137)
+# the frame which is used by every button
+new_frame_on_click = customtkinter.CTkFrame(master=root, height=550, width=640,
+                                            fg_color="#D8CBC4")
 
-top_books_button = customtkinter.CTkButton(root,width=120,height=140,
+def on_click_top():
+    """when the top books button is clicked"""
+    new_frame_on_click.lift()
+    new_frame_on_click.pack(padx=8,pady=8,fill="both",expand=True)
+    new_frame_on_click.pack_propagate()
+def on_click_back_button():
+    """when back button is clicked on the new frame"""
+    new_frame_on_click.pack_forget()
+    root.lift()
+top_books_label = customtkinter.CTkLabel(master=new_frame_on_click,height=40,width=470,
+                                         text="  TOP BOOKS", fg_color="#8B6C5C",text_color="#EEE5E0",
+                                         font=("Poppins",19),compound="center",anchor=W)
+top_books_label.place(y=10,x=60)
+top_books_desp = customtkinter.CTkLabel(master=new_frame_on_click,height=60,width=520,
+                                        fg_color="#765341",
+                                        text="This is the page where you can the top books used by every student",
+                                        font=("Poppins",15),)
+top_books_desp.place(x=10,y=60)
+back_button = customtkinter.CTkButton(master=new_frame_on_click,height=40,width=40,
+                                      text=">",hover=True,hover_color="#5B3E31",
+                                      fg_color="#8B6C5C",command=on_click_back_button)
+back_button.place(x=10,y=10)
+book_1 = customtkinter.CTkButton(master=new_frame_on_click,height=170,width=140,
+                                fg_color="#6A4A3A",text_color="#EEE5E0",text="",
+                                hover=True,hover_color="#5B3E31")
+book_1.place(x=20,y=140)
+book_2 = customtkinter.CTkButton(master=new_frame_on_click,height=170,width=140,
+                                fg_color="#6A4A3A",text_color="#EEE5E0",text="",
+                                hover=True,hover_color="#5B3E31")
+book_2.place(x=180,y=140)
+book_3 = customtkinter.CTkButton(master=new_frame_on_click,height=170,width=140,
+                                fg_color="#6A4A3A",text_color="#EEE5E0",text="",
+                                hover=True,hover_color="#5B3E31")
+book_3.place(x=340,y=140)
+book_4 = customtkinter.CTkButton(master=new_frame_on_click,height=170,width=140,
+                                fg_color="#6A4A3A",text_color="#EEE5E0",text="",
+                                hover=True,hover_color="#5B3E31")
+book_4.place(x=20,y=330)
+book_5 = customtkinter.CTkButton(master=new_frame_on_click,height=170,width=140,
+                                fg_color="#6A4A3A",text_color="#EEE5E0",text="",
+                                hover=True,hover_color="#5B3E31")
+book_5.place(x=180,y=330)
+book_6 = customtkinter.CTkButton(master=new_frame_on_click,height=170,width=140,
+                                fg_color="#6A4A3A",text_color="#EEE5E0",text="",
+                                hover=True,hover_color="#5B3E31")
+book_6.place(x=340,y=330)
+
+
+
+#the buttons on the main page
+buttons_frame = customtkinter.CTkFrame(master= root, height=380,width=429,
+                                       fg_color="#D8CBC4")
+buttons_frame.place(x=167,y=174)
+
+top_books_button = customtkinter.CTkButton(master=buttons_frame,width=120,height=140,
                                            text="Top Books",text_color="#D8CBC4",
                                            fg_color="#6A4A3A",
                                            hover=True,hover_color="#5B3E31",
                                            font=("Poppins",19),
                                            anchor=N,
                                            image=books_image1,compound="bottom",
-                                           border_spacing=5
+                                           border_spacing=5,command=on_click_top
+                                           
                                            )
-top_books_button.place(x=170,y=190)
+top_books_button.place(x=10,y=10)
 
-another1_button = customtkinter.CTkButton(root,width=120,height=140,
+
+
+another1_button = customtkinter.CTkButton(master=buttons_frame,width=120,height=140,
                                          text="Future\nButton",text_color="#D8CBC4",
                                          fg_color="#6A4a3A",
                                          hover=True,hover_color="#5B3E31",
                                          font=("Poppins",19))
-another1_button.place(x=450,y=190)
+another1_button.place(x=270,y=10)
 
-recommended_book_button = customtkinter.CTkButton(root,width=120,height=140,
+recommended_book_button = customtkinter.CTkButton(master=buttons_frame,width=120,height=140,
                                                   text="Recom\nmended\nBooks",text_color="#D8CBC4",
                                                   fg_color="#6A4A3A",
                                                   hover=True,hover_color="#5B3E31",
                                                   font=("Poppins",19))
-recommended_book_button.place(x=310,y=190)
+recommended_book_button.place(x=140,y=10)
 
-JNTUH_syllabus_button = customtkinter.CTkButton(root,width=120,height=140,
+JNTUH_syllabus_button = customtkinter.CTkButton(master=buttons_frame,width=120,height=140,
                                                 text="JNTUH",text_color="#D8CBC4",
                                                 anchor=N,
                                                 fg_color="#6A4A3A",
                                                 hover=True,hover_color="#5B3E31",
                                                 font=("Poppins",19),
                                                 image=JNTUH_logo_image,compound="bottom")
-JNTUH_syllabus_button.place(x=170,y=358)
+JNTUH_syllabus_button.place(x=10,y=160)
 
-exam_button = customtkinter.CTkButton(root,height=140,width=120,
+exam_button = customtkinter.CTkButton(master=buttons_frame,height=140,width=120,
                                       text="Exam \n Dates",text_color="#D8CBC4",
                                        fg_color="#6A4A3A",
                                       hover=True,hover_color="#5B3E31",
                                       font=("Poppins",19))
-exam_button.place(x=310,y=358)
+exam_button.place(x=140,y=160)
 
-another2_button = customtkinter.CTkButton(root,width=120,height=140,
+another2_button = customtkinter.CTkButton(master=buttons_frame,width=120,height=140,
                                          text="Future\nButton",text_color="#D8CBC4",
                                          fg_color="#6A4a3A",
                                          hover=True,hover_color="#5B3E31",
                                          font=("Poppins",19))
-another2_button.place(x=450,y=358)
+another2_button.place(x=270,y=160)
 
 drawing_frame = customtkinter.CTkFrame(master=root, height=400, width=113,
                                        fg_color="#8B6C5C",
