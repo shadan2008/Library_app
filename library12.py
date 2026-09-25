@@ -177,6 +177,40 @@ back_button = customtkinter.CTkButton(master=jntuh_frame,height=40,width=40,
                                       fg_color="#8B6C5C",command=on_click_back_button)
 back_button.place(x=10,y=10)
 
+label_1C = customtkinter.CTkLabel(master=jntuh_frame,text="Computer Science",
+                                  text_color="#3D251E",fg_color="#D8CBC4",
+                                  font=("Poppins",30))
+label_1C.place(x=15,y=130)
+label_1C_button = customtkinter.CTkButton(master=jntuh_frame,height=40,width=520,
+                                          text="JNTUH Syllabus of CSE course",
+                                          fg_color="#8B6C5C",
+                                          text_color="#EEE5E0",font=("Poppins",15),
+                                          hover=True,hover_color="#5B3E31",
+                                          )
+label_1C_button.place(x=15,y=170)
+label_1E = customtkinter.CTkLabel(master=jntuh_frame,text="Electronics and Communication",
+                                  text_color="#3D251E",fg_color="#D8CBC4",
+                                  font=("Poppins",30))
+label_1E.place(x=15,y=220)
+label_1E_button = customtkinter.CTkButton(master=jntuh_frame,height=40,width=520,
+                                          text="JNTUH Syllabus of ECE course",
+                                          fg_color="#8B6C5C",
+                                          text_color="#EEE5E0",font=("Poppins",15),
+                                          hover=True,hover_color="#5B3E31",
+                                          )
+label_1E_button.place(x=15,y=260)
+label_1A = customtkinter.CTkLabel(master=jntuh_frame,text="Artificial Intelligence and Machine Learning",
+                                  text_color="#3D251E",fg_color="#D8CBC4",
+                                  font=("Poppins",30))
+label_1A.place(x=15,y=310)
+label_1A_button = customtkinter.CTkButton(master=jntuh_frame,height=40,width=520,
+                                          text="JNTUH Syllabus of AIML course",
+                                          fg_color="#8B6C5C",
+                                          text_color="#EEE5E0",font=("Poppins",15),
+                                          hover=True,hover_color="#5B3E31",
+                                          )
+label_1A_button.place(x=15,y=350)
+#wanted to add more our clg has this much courses only
 
 JNTUH_syllabus_button = customtkinter.CTkButton(master=buttons_frame,width=120,height=140,
                                                 text="JNTUH",text_color="#D8CBC4",
