@@ -177,10 +177,8 @@ back_button = customtkinter.CTkButton(master=jntuh_frame,height=40,width=40,
                                       fg_color="#8B6C5C",command=on_click_back_button)
 back_button.place(x=10,y=10)
 
-label_1C = customtkinter.CTkLabel(master=jntuh_frame,text="Computer Science",
-                                  text_color="#3D251E",fg_color="#D8CBC4",
-                                  font=("Poppins",30))
-label_1C.place(x=15,y=130)
+
+#the frame when you click the cse syllabus button
 C_new_frame = customtkinter.CTkFrame(master=jntuh_frame,height=550, width=64,fg_color="#D8CBC4")
 def computer_science_syllabus1():
     """the syllabus frame when you click the computer scrience button"""
@@ -262,7 +260,10 @@ fourth_year_CSE = customtkinter.CTkButton(master=C_new_frame,height=65,width=170
                                          fg_color="#6A4A3A",font=("Poppins",19),
                                          command=on_click_fourth)
 fourth_year_CSE.place(x=20,y=395)
-
+label_1C = customtkinter.CTkLabel(master=jntuh_frame,text="Computer Science",
+                                  text_color="#3D251E",fg_color="#D8CBC4",
+                                  font=("Poppins",30))
+label_1C.place(x=15,y=130)
 label_1C_button = customtkinter.CTkButton(master=jntuh_frame,height=40,width=520,
                                           text="JNTUH Syllabus of CSE course",
                                           fg_color="#8B6C5C",
@@ -271,6 +272,89 @@ label_1C_button = customtkinter.CTkButton(master=jntuh_frame,height=40,width=520
                                           command=computer_science_syllabus1
                                           )
 label_1C_button.place(x=15,y=170)
+
+E_new_frame = customtkinter.CTkFrame(master=jntuh_frame,height=550, width=64,fg_color="#D8CBC4")
+def ECE_syllabus1():
+    """the syllabus frame when you click the computer scrience button"""
+    E_new_frame.lift()
+    E_new_frame.pack(padx=2,pady=2,fill="both")
+    E_new_frame.pack_propagate()
+def on_click_back_button():
+    """when back button is clicked on the new frame"""
+    E_new_frame.pack_forget()
+    root.lift()
+R25_syllabus_label = customtkinter.CTkLabel(master=E_new_frame,height=40,width=470,
+                                         text="  R25 syllabus ECE", fg_color="#8B6C5C",text_color="#EEE5E0",
+                                         font=("Poppins",19),compound="center",anchor=W)
+R25_syllabus_label.place(y=10,x=60)
+back_button = customtkinter.CTkButton(master=E_new_frame,height=40,width=40,
+                                      text=">",hover=True,hover_color="#5B3E31",
+                                      fg_color="#8B6C5C",command=on_click_back_button)
+back_button.place(x=10,y=10)
+R25_syllabus_desp = customtkinter.CTkLabel(master=E_new_frame,height=60,width=520,
+                                        fg_color="#765341",
+                                        text="This page shows the official information about the syllabus of the ECE R25 regulation course",
+                                        font=("Poppins",15),)
+R25_syllabus_desp.place(x=10,y=60)
+sem1_button_E = customtkinter.CTkButton(master=E_new_frame,height=30,width=90,
+                                      text="1st SEM",text_color="#EEE5E0",
+                                      fg_color="#6A4A3A",font=("Poppins",17),
+                                      hover=True,hover_color="#5B3E31"
+                                      )
+sem2_button_E = customtkinter.CTkButton(master=E_new_frame,height=30,width=90,
+                                      text="2nd SEM",text_color="#EEE5E0",
+                                      fg_color="#6A4A3A",font=("Poppins",17),
+                                      hover=True,hover_color="#5B3E31"
+                                      )
+def on_click_first_E():
+    """when first year is clicked"""
+    sem1_button_E.place(x=210,y=140)
+    sem2_button_E.place(x=210,y=175)
+
+first_year_ECE = customtkinter.CTkButton(master=E_new_frame,height=65,width=170,
+                                         text=" 1ST YEAR ECE ",text_color="#EEE5E0",
+                                         hover=True,hover_color="#5B3E31",
+                                         fg_color="#6A4A3A",font=("Poppins",19),
+                                         command=on_click_first_E)
+first_year_ECE.place(x=20,y=140)
+def on_click_second_E():
+    """when first year is clicked"""
+    sem1_button_E.configure(text="3rd SEM")
+    sem1_button_E.place(x=210,y=225)
+    sem2_button_E.configure(text="4th SEM")
+    sem2_button_E.place(x=210,y=260)
+second_year_ECE = customtkinter.CTkButton(master=E_new_frame,height=65,width=170,
+                                         text=" 2ND YEAR ECE ",text_color="#EEE5E0",
+                                         hover=True,hover_color="#5B3E31",
+                                         fg_color="#6A4A3A",font=("Poppins",19),
+                                         command=on_click_second_E
+                                         )
+second_year_ECE.place(x=20,y=225)
+def on_click_third_E():
+    """when first year is clicked"""
+    sem1_button_E.configure(text="5th SEM")
+    sem1_button_E.place(x=210,y=310)
+    sem2_button_E.configure(text="6th SEM")
+    sem2_button_E.place(x=210,y=345)
+third_year_ECE = customtkinter.CTkButton(master=E_new_frame,height=65,width=170,
+                                         text=" 3RD YEAR ECE ",text_color="#EEE5E0",
+                                         hover=True,hover_color="#5B3E31",
+                                         fg_color="#6A4A3A",font=("Poppins",19),
+                                         command=on_click_third_E)
+third_year_ECE.place(x=20,y=310)
+def on_click_fourth_E():
+    """when first year is clicked"""
+    sem1_button_E.configure(text="7th SEM")
+    sem1_button_E.place(x=210,y=395)
+    sem2_button_E.configure(text="8th SEM")
+    sem2_button_E.place(x=210,y=430)
+fourth_year_ECE = customtkinter.CTkButton(master=E_new_frame,height=65,width=170,
+                                         text=" 4TH YEAR ECE ",text_color="#EEE5E0",
+                                         hover=True,hover_color="#5B3E31",
+                                         fg_color="#6A4A3A",font=("Poppins",19),
+                                         command=on_click_fourth_E)
+fourth_year_ECE.place(x=20,y=395)
+
 label_1E = customtkinter.CTkLabel(master=jntuh_frame,text="Electronics and Communication",
                                   text_color="#3D251E",fg_color="#D8CBC4",
                                   font=("Poppins",30))
@@ -280,8 +364,91 @@ label_1E_button = customtkinter.CTkButton(master=jntuh_frame,height=40,width=520
                                           fg_color="#8B6C5C",
                                           text_color="#EEE5E0",font=("Poppins",15),
                                           hover=True,hover_color="#5B3E31",
+                                          command=ECE_syllabus1
                                           )
 label_1E_button.place(x=15,y=260)
+A_new_frame = customtkinter.CTkFrame(master=jntuh_frame,height=550, width=64,fg_color="#D8CBC4")
+def AIML_syllabus1():
+    """the syllabus frame when you click the computer scrience button"""
+    A_new_frame.lift()
+    A_new_frame.pack(padx=2,pady=2,fill="both")
+    A_new_frame.pack_propagate()
+def on_click_back_button():
+    """when back button is clicked on the new frame"""
+    A_new_frame.pack_forget()
+    root.lift()
+R25_syllabus_label = customtkinter.CTkLabel(master=A_new_frame,height=40,width=470,
+                                         text="  R25 syllabus AIML", fg_color="#8B6C5C",text_color="#EEE5E0",
+                                         font=("Poppins",19),compound="center",anchor=W)
+R25_syllabus_label.place(y=10,x=60)
+back_button = customtkinter.CTkButton(master=A_new_frame,height=40,width=40,
+                                      text=">",hover=True,hover_color="#5B3E31",
+                                      fg_color="#8B6C5C",command=on_click_back_button)
+back_button.place(x=10,y=10)
+R25_syllabus_desp = customtkinter.CTkLabel(master=A_new_frame,height=60,width=520,
+                                        fg_color="#765341",
+                                        text="This page shows the official information about the syllabus of the AIML R25 regulation course",
+                                        font=("Poppins",15),)
+R25_syllabus_desp.place(x=10,y=60)
+sem1_button_A = customtkinter.CTkButton(master=A_new_frame,height=30,width=90,
+                                      text="1st SEM",text_color="#EEE5E0",
+                                      fg_color="#6A4A3A",font=("Poppins",17),
+                                      hover=True,hover_color="#5B3E31"
+                                      )
+sem2_button_A = customtkinter.CTkButton(master=A_new_frame,height=30,width=90,
+                                      text="2nd SEM",text_color="#EEE5E0",
+                                      fg_color="#6A4A3A",font=("Poppins",17),
+                                      hover=True,hover_color="#5B3E31"
+                                      )
+def on_click_first_A():
+    """when first year is clicked"""
+    sem1_button_A.place(x=210,y=140)
+    sem2_button_A.place(x=210,y=175)
+
+first_year_AIML = customtkinter.CTkButton(master=A_new_frame,height=65,width=170,
+                                         text=" 1ST YEAR AIML ",text_color="#EEE5E0",
+                                         hover=True,hover_color="#5B3E31",
+                                         fg_color="#6A4A3A",font=("Poppins",19),
+                                         command=on_click_first_A)
+first_year_AIML.place(x=20,y=140)
+def on_click_second_A():
+    """when first year is clicked"""
+    sem1_button_A.configure(text="3rd SEM")
+    sem1_button_A.place(x=210,y=225)
+    sem2_button_A.configure(text="4th SEM")
+    sem2_button_A.place(x=210,y=260)
+second_year_AIML = customtkinter.CTkButton(master=A_new_frame,height=65,width=170,
+                                         text=" 2ND YEAR AIML ",text_color="#EEE5E0",
+                                         hover=True,hover_color="#5B3E31",
+                                         fg_color="#6A4A3A",font=("Poppins",19),
+                                         command=on_click_second_A
+                                         )
+second_year_AIML.place(x=20,y=225)
+def on_click_third_A():
+    """when first year is clicked"""
+    sem1_button_A.configure(text="5th SEM")
+    sem1_button_A.place(x=210,y=310)
+    sem2_button_A.configure(text="6th SEM")
+    sem2_button_A.place(x=210,y=345)
+third_year_AIML = customtkinter.CTkButton(master=A_new_frame,height=65,width=170,
+                                         text=" 3RD YEAR AIML ",text_color="#EEE5E0",
+                                         hover=True,hover_color="#5B3E31",
+                                         fg_color="#6A4A3A",font=("Poppins",19),
+                                         command=on_click_third_A)
+third_year_AIML.place(x=20,y=310)
+def on_click_fourth_A():
+    """when first year is clicked"""
+    sem1_button_A.configure(text="7th SEM")
+    sem1_button_A.place(x=210,y=395)
+    sem2_button_A.configure(text="8th SEM")
+    sem2_button_A.place(x=210,y=430)
+fourth_year_AIML = customtkinter.CTkButton(master=A_new_frame,height=65,width=170,
+                                         text=" 4TH YEAR AIML ",text_color="#EEE5E0",
+                                         hover=True,hover_color="#5B3E31",
+                                         fg_color="#6A4A3A",font=("Poppins",19),
+                                         command=on_click_fourth_A)
+fourth_year_AIML.place(x=20,y=395)
+
 label_1A = customtkinter.CTkLabel(master=jntuh_frame,text="Artificial Intelligence and Machine Learning",
                                   text_color="#3D251E",fg_color="#D8CBC4",
                                   font=("Poppins",30))
@@ -291,6 +458,7 @@ label_1A_button = customtkinter.CTkButton(master=jntuh_frame,height=40,width=520
                                           fg_color="#8B6C5C",
                                           text_color="#EEE5E0",font=("Poppins",15),
                                           hover=True,hover_color="#5B3E31",
+                                          command=AIML_syllabus1
                                           )
 label_1A_button.place(x=15,y=350)
 #wanted to add more our clg has this much courses only
