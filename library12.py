@@ -214,7 +214,9 @@ sem2_button = customtkinter.CTkButton(master=C_new_frame,height=30,width=90,
                                       )
 def on_click_first():
     """when first year is clicked"""
+    sem1_button.configure(text="1st SEM")
     sem1_button.place(x=210,y=140)
+    sem2_button.configure(text="2nd SEM")
     sem2_button.place(x=210,y=175)
 
 first_year_CSE = customtkinter.CTkButton(master=C_new_frame,height=65,width=170,
