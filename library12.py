@@ -182,20 +182,20 @@ year_entry = customtkinter.CTkEntry(master=recommended_books_frame,height=50,wid
                                       corner_radius=10,fg_color="#765341",text_color="#EEE5E0",
                                       placeholder_text="Enter your year",font=("Poppins",20),
                                       border_color="#A08679",placeholder_text_color="#AB9B91")
-year_entry.place(x=140,y=280)
+year_entry.place(x=140,y=270)
 subject_lable = customtkinter.CTkLabel(master=recommended_books_frame,height=40,
                                       text="Enter your Subject",text_color="#4C3228",
                                       font=("Poppins",25),fg_color="#D8CBC4")
-subject_lable.place(x=140,y=340)
+subject_lable.place(x=140,y=330)
 subject_entry = customtkinter.CTkEntry(master=recommended_books_frame,height=50,width=270,
                                       corner_radius=10,fg_color="#765341",text_color="#EEE5E0",
                                       placeholder_text="Enter your subject",font=("Poppins",20),
                                       border_color="#A08679",placeholder_text_color="#AB9B91")
-subject_entry.place(x=140,y=390)
+subject_entry.place(x=140,y=370)
 submit_button = customtkinter.CTkButton(master=recommended_books_frame,height=45,
                                         text="Submit",text_color="#EEE5E0",font=("Poppins",20),
                                         fg_color="#765341",hover_color="#4C3228")
-submit_button.place(x=140,y=450)
+submit_button.place(x=140,y=440)
 drawing_frame2 = customtkinter.CTkFrame(master=recommended_books_frame,height=400,width=120,
                                         fg_color="#8B6C5C",border_width=2,border_color="#BCA89F")
 drawing_frame2.place(x=10,y=130)
