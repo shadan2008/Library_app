@@ -3,9 +3,6 @@ import customtkinter
 from PIL import Image 
 import PIL
 import tkinter as tk
-
-
-
 root=customtkinter.CTk(fg_color="#EEE5E0")
 root.title("MY LIBRARY")
 root.geometry("650x560+550+90")
@@ -138,21 +135,79 @@ top_books_button = customtkinter.CTkButton(master=buttons_frame,width=120,height
                                            )
 top_books_button.place(x=10,y=10)
 
-
-
 another1_button = customtkinter.CTkButton(master=buttons_frame,width=120,height=140,
                                          text="Future\nButton",text_color="#D8CBC4",
                                          fg_color="#6A4a3A",
                                          hover=True,hover_color="#5B3E31",
                                          font=("Poppins",19))
 another1_button.place(x=270,y=10)
-
+recommended_books_frame = customtkinter.CTkFrame(master=root, height=550, width=640,
+                                            fg_color="#D8CBC4")
+def on_click_recommended():
+    """when the recommeneded button is clicked"""
+    recommended_books_frame.lift()
+    recommended_books_frame.pack(padx=8,pady=8,fill="both",expand=True)
+    recommended_books_frame.pack_propagate()
+def on_click_back_button():
+    """when back button is clicked on the new frame"""
+    recommended_books_frame.pack_forget()
+    root.lift()
+recommended_label = customtkinter.CTkLabel(master=recommended_books_frame ,height=40,width=470,
+                                         text="  REDOMMENDED BOOKS", fg_color="#8B6C5C",text_color="#EEE5E0",
+                                         font=("Poppins",19),compound="center",anchor=W)
+recommended_label.place(y=10,x=60)
+recommended_desp = customtkinter.CTkLabel(master=recommended_books_frame ,height=60,width=520,
+                                        fg_color="#765341",
+                                        text="This is the page where we can help you to use the book",
+                                        font=("Poppins",15),)
+recommended_desp.place(x=10,y=60)
+back_button = customtkinter.CTkButton(master=recommended_books_frame ,height=40,width=40,
+                                      text=">",hover=True,hover_color="#5B3E31",
+                                      fg_color="#8B6C5C",command=on_click_back_button)
+back_button.place(x=10,y=10)
+course_lable = customtkinter.CTkLabel(master=recommended_books_frame,height=40,
+                                      text="Enter your Course",text_color="#4C3228",
+                                      font=("Poppins",25),fg_color="#D8CBC4")
+course_lable.place(x=140,y=130)
+course_entry = customtkinter.CTkEntry(master=recommended_books_frame,height=50,width=270,
+                                      corner_radius=10,fg_color="#765341",text_color="#EEE5E0",
+                                      placeholder_text="Enter your course",font=("Poppins",20),
+                                      border_color="#A08679",placeholder_text_color="#AB9B91")
+course_entry.place(x=140,y=170)
+year_lable = customtkinter.CTkLabel(master=recommended_books_frame,height=40,
+                                      text="Enter your Year",text_color="#4C3228",
+                                      font=("Poppins",25),fg_color="#D8CBC4")
+year_lable.place(x=140,y=230)
+year_entry = customtkinter.CTkEntry(master=recommended_books_frame,height=50,width=270,
+                                      corner_radius=10,fg_color="#765341",text_color="#EEE5E0",
+                                      placeholder_text="Enter your year",font=("Poppins",20),
+                                      border_color="#A08679",placeholder_text_color="#AB9B91")
+year_entry.place(x=140,y=280)
+subject_lable = customtkinter.CTkLabel(master=recommended_books_frame,height=40,
+                                      text="Enter your Subject",text_color="#4C3228",
+                                      font=("Poppins",25),fg_color="#D8CBC4")
+subject_lable.place(x=140,y=340)
+subject_entry = customtkinter.CTkEntry(master=recommended_books_frame,height=50,width=270,
+                                      corner_radius=10,fg_color="#765341",text_color="#EEE5E0",
+                                      placeholder_text="Enter your subject",font=("Poppins",20),
+                                      border_color="#A08679",placeholder_text_color="#AB9B91")
+subject_entry.place(x=140,y=390)
+submit_button = customtkinter.CTkButton(master=recommended_books_frame,height=45,
+                                        text="Submit",text_color="#EEE5E0",font=("Poppins",20),
+                                        fg_color="#765341",hover_color="#4C3228")
+submit_button.place(x=140,y=450)
+drawing_frame2 = customtkinter.CTkFrame(master=recommended_books_frame,height=400,width=120,
+                                        fg_color="#8B6C5C",border_width=2,border_color="#BCA89F")
+drawing_frame2.place(x=10,y=130)
 recommended_book_button = customtkinter.CTkButton(master=buttons_frame,width=120,height=140,
                                                   text="Recom\nmended\nBooks",text_color="#D8CBC4",
                                                   fg_color="#6A4A3A",
                                                   hover=True,hover_color="#5B3E31",
-                                                  font=("Poppins",19))
+                                                  font=("Poppins",19),
+                                                  command=on_click_recommended)
 recommended_book_button.place(x=140,y=10)
+
+
 jntuh_frame = customtkinter.CTkFrame(master=root,height=550, width=64,fg_color="#D8CBC4")
 def on_click_jntuh():
     """when jnuth is clicked"""
@@ -535,8 +590,6 @@ toggle_btn = customtkinter.CTkButton(
 
 toggle_btn.pack(pady=10, padx=5)
 
-
-
 scroll_frame = customtkinter.CTkScrollableFrame(side_bar_frame, fg_color="transparent")
 
 menu_label = customtkinter.CTkLabel(master=scroll_frame,height=30,width=195,
@@ -547,8 +600,6 @@ menu_label.pack(pady=10)
 find_books_frame = customtkinter.CTkFrame(master=root,height=500,width=500)
 def find_books_frame():
     """"""
-
-
 
 find_books_button = customtkinter.CTkButton(master=scroll_frame,
                                             height=40,width=180,hover=True,
