@@ -79,7 +79,7 @@ def on_click_back_button():
     top_books_frame.pack_forget()
     root.lift()
 #####################################################################
-final_book_frame =customtkinter.CTkFrame(master=top_books_frame,height=650,width=640,fg_color="#D8CBC4") 
+final_book_frame =customtkinter.CTkFrame(master=top_books_frame,height=650,width=640,fg_color="#BCA89F") 
 def on_click_final():
     final_book_frame.lift()
     final_book_frame.pack(padx=0,pady=0)
@@ -103,18 +103,34 @@ back_button1 = customtkinter.CTkButton(master=final_book_frame,height=40,width=4
                                       fg_color="#8B6C5C",command=on_click_back_button1)
 back_button1.place(x=10,y=10)
 final_book = customtkinter.CTkButton(master=final_book_frame,height=270,width=220,
-                                     text="",hover=False,fg_color="#4C3228",
+                                     text="",hover=False,fg_color="#5B3E31",
                                      corner_radius=1)
 final_book.place(x=20,y=145)
 final_book_section = customtkinter.CTkLabel(master=final_book_frame,height=50,width=240,
                                             text="section : 1 \n shelf : 2",fg_color="#765341",
-                                            text_color="#EEE5E0",corner_radius=9,font=("Poppins",13))
-final_book_section.place(x=250,y=145)
+                                            text_color="#EEE5E0",corner_radius=9,font=("Poppins",16))
+final_book_section.place(x=265,y=150)
 final_book_3d = customtkinter.CTkButton(master=final_book_frame,height=50,width=240,
-                                        text="3D image of the library",text_color="#EEE5E0",
+                                        text="3D Image of the library",text_color="#EEE5E0",
                                         fg_color="#765341",hover=True,hover_color="#4C3228",
                                         corner_radius=9,font=("Poppins",19))
-final_book_3d.place(x=250,y=205)
+final_book_3d.place(x=265,y=215)
+final_book_notes = customtkinter.CTkButton(master=final_book_frame,height=50,width=240,
+                                           text="Notes",text_color="#EEE5E0",
+                                           fg_color="#765341",hover=True,hover_color="#4C3228",
+                                           corner_radius=9,font=("Poppins",19))
+final_book_notes.place(x=265,y=280)
+final_book_previous_year_papers = customtkinter.CTkButton(master=final_book_frame,height=50,width=240,
+                                        text="3D Image of the library",text_color="#EEE5E0",
+                                        fg_color="#765341",hover=True,hover_color="#4C3228",
+                                        corner_radius=9,font=("Poppins",19))
+final_book_previous_year_papers.place(x=265,y=348)
+final_book_pdf = customtkinter.CTkButton(master=final_book_frame,height=40,width=520,
+                                         text="The PDF of the Book",text_color="#EEE5E0",
+                                         fg_color="#765341",hover=True,hover_color="#4C3228",
+                                         corner_radius=9,font=("Poppins",19))
+final_book_pdf.place(x=20,y=435)
+
 #####################################################################
 top_books_label = customtkinter.CTkLabel(master=top_books_frame,height=40,width=470,
                                          text="  TOP BOOKS", fg_color="#8B6C5C",text_color="#EEE5E0",
