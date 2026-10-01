@@ -15,6 +15,14 @@ find_image = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/logo_ima
 JNTUH_logo_image = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/jntuh logo.png"),size=(80,80))
 books_image1 = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/books1.png"),size=(90,90))
 camera_image = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/ccc.png"),size=(25,25))
+book_image1 = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/bookimage.png"),size=(220,270))
+book_image1_small = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/bookimage.png"),size=(140,170))
+book_image2 = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/bookimage2.png"),size=(220,270))
+book_image2_small = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/bookimage2.png"),size=(140,170))
+book_image3_small = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/bookimage3.png"),size=(140,170))
+book_image4_small = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/bookimage4.png"),size=(140,170))
+book_image5_small = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/image5.png"),size=(140,170))
+book_image6_small = customtkinter.CTkImage(Image.open("C:/Users/DELL/Downloads/bookimage6.png"),size=(140,170))
 
 logo_label = customtkinter.CTkLabel(root,height=40,width=534,
                                     text=" Welcome To Our Digital Library",
@@ -84,6 +92,15 @@ def on_click_final():
     final_book_frame.lift()
     final_book_frame.pack(padx=0,pady=0)
     final_book_frame.pack_propagate()
+def book_image_command():
+    
+    if book_1:
+        final_book_image.configure(image=book_image1)
+    elif book_2:
+        final_book_image.configure(image=book_image2)
+    elif book_3:
+        final_book_image.configure(image=book_image2)
+    
 def on_click_back_button1():
     """when back button is clicked on the new frame"""
     final_book_frame.pack_forget()
@@ -102,10 +119,10 @@ back_button1 = customtkinter.CTkButton(master=final_book_frame,height=40,width=4
                                       text=">",hover=True,hover_color="#5B3E31",
                                       fg_color="#8B6C5C",command=on_click_back_button1)
 back_button1.place(x=10,y=10)
-final_book = customtkinter.CTkButton(master=final_book_frame,height=270,width=220,
-                                     text="",hover=False,fg_color="#5B3E31",
-                                     corner_radius=1)
-final_book.place(x=20,y=145)
+final_book_image = customtkinter.CTkButton(master=final_book_frame,height=270,width=220,
+                                     text="",hover=False,fg_color="#D8CBC4",
+                                     corner_radius=1,command=book_image_command)
+final_book_image.place(x=20,y=145)
 final_book_section = customtkinter.CTkLabel(master=final_book_frame,height=50,width=240,
                                             text="section : 1 \n shelf : 2",fg_color="#765341",
                                             text_color="#EEE5E0",corner_radius=9,font=("Poppins",16))
@@ -154,27 +171,33 @@ top_books_scrollable_frame.place(x=10,y=140)
 
 book_1 = customtkinter.CTkButton(master=top_books_scrollable_frame,height=170,width=140,
                                 fg_color="#6A4A3A",text_color="#EEE5E0",text="",
-                                hover=True,hover_color="#5B3E31",command=on_click_final)
+                                hover=True,hover_color="#5B3E31",command=on_click_final,
+                                image=book_image1_small)
 book_1.grid(row=0,column=0,padx=7,pady=7)
 book_2 = customtkinter.CTkButton(master=top_books_scrollable_frame,height=170,width=140,
                                 fg_color="#6A4A3A",text_color="#EEE5E0",text="",
-                                hover=True,hover_color="#5B3E31",command=on_click_final)
+                                hover=True,hover_color="#5B3E31",command=on_click_final,
+                                image=book_image2_small)
 book_2.grid(row=0,column=1,padx=7,pady=7)
 book_3 = customtkinter.CTkButton(master=top_books_scrollable_frame,height=170,width=140,
                                 fg_color="#6A4A3A",text_color="#EEE5E0",text="",
-                                hover=True,hover_color="#5B3E31",command=on_click_final)
+                                hover=True,hover_color="#5B3E31",command=on_click_final,
+                                image=book_image3_small)
 book_3.grid(row=0,column=2,padx=7,pady=7)
 book_4 = customtkinter.CTkButton(master=top_books_scrollable_frame,height=170,width=140,
                                 fg_color="#6A4A3A",text_color="#EEE5E0",text="",
-                                hover=True,hover_color="#5B3E31",command=on_click_final)
+                                hover=True,hover_color="#5B3E31",command=on_click_final,
+                                image=book_image4_small)
 book_4.grid(row=1,column=0,padx=7,pady=7)
 book_5 = customtkinter.CTkButton(master=top_books_scrollable_frame,height=170,width=140,
                                 fg_color="#6A4A3A",text_color="#EEE5E0",text="",
-                                hover=True,hover_color="#5B3E31",command=on_click_final)
+                                hover=True,hover_color="#5B3E31",command=on_click_final,
+                                image=book_image5_small)
 book_5.grid(row=1,column=1,padx=7,pady=7)
 book_6 = customtkinter.CTkButton(master=top_books_scrollable_frame,height=170,width=140,
                                 fg_color="#6A4A3A",text_color="#EEE5E0",text="",
-                                hover=True,hover_color="#5B3E31",command=on_click_final)
+                                hover=True,hover_color="#5B3E31",command=on_click_final,
+                                image=book_image6_small)
 book_6.grid(row=1,column=2,padx=7,pady=7)
 book_7 = customtkinter.CTkButton(master=top_books_scrollable_frame,height=170,width=140,
                                 fg_color="#6A4A3A",text_color="#EEE5E0",text="",
